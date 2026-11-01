@@ -1,0 +1,29 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor temporary and workspace-local files
+.vscode/*.log
+.vscode/settings.local.json
+*.swp
+*.swo
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+local.settings.json
+credentials/
+secrets/
+
+# Local tooling output (the site itself has no build step)
+node_modules/
+dist/
+coverage/
+*.tmp
+*.bak

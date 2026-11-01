@@ -44,7 +44,7 @@
       navigation.classList.toggle("is-open", !isOpen);
     });
     navigation.addEventListener("click", (event) => {
-      if (event.target instanceof HTMLAnchorElement && window.matchMedia("(max-width: 680px)").matches) {
+      if (event.target instanceof HTMLAnchorElement && window.matchMedia("(max-width: 980px)").matches) {
         navigation.classList.remove("is-open");
         menuButton.setAttribute("aria-expanded", "false");
         const label = menuButton.querySelector(".sr-only");
@@ -56,4 +56,41 @@
   document.querySelectorAll("[data-year]").forEach((element) => {
     element.textContent = String(new Date().getFullYear());
   });
+
+  const heroFlow = document.querySelector(".hero-flow");
+  if (heroFlow) {
+    const steps = [...heroFlow.querySelectorAll(".flow-step")];
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (steps.length > 1 && !reduceMotion.matches) {
+      let activeIndex = 0;
+      let timer = null;
+      let isInViewport = true;
+      const advance = () => {
+        steps[activeIndex].classList.remove("is-active");
+        activeIndex = (activeIndex + 1) % steps.length;
+        steps[activeIndex].classList.add("is-active");
+      };
+      const start = () => {
+        if (!timer) timer = window.setInterval(advance, 1600);
+      };
+      const stop = () => {
+        window.clearInterval(timer);
+        timer = null;
+      };
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(([entry]) => {
+          isInViewport = entry.isIntersecting;
+          if (entry.isIntersecting && document.visibilityState === "visible") start();
+          else stop();
+        });
+        observer.observe(heroFlow);
+      } else {
+        start();
+      }
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "hidden") stop();
+        else if (isInViewport) start();
+      });
+    }
+  }
 })();
