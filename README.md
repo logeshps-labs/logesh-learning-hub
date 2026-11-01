@@ -2,7 +2,7 @@
 
 **Learn AI, Automation, and Agentic Systems — Simply and Practically.**
 
-A free, static learning website built with HTML, CSS, and vanilla JavaScript. It has no backend, database, build step, or paid dependency and is designed to publish as a GitHub Pages project site at `https://USERNAME.github.io/logesh-learning-hub/`.
+A free, static learning website built with HTML, CSS, and vanilla JavaScript. It has no backend, database, build step, or paid dependency and is published as a GitHub Pages project site at `https://logeshps-labs.github.io/logesh-learning-hub/`.
 
 ## Run the site locally
 
@@ -40,22 +40,22 @@ These commands are instructions only; Git was not initialized as part of creatin
 
 ## Connect this folder to a GitHub repository
 
-Create an empty GitHub repository named `logesh-learning-hub` (do not add a README or license there if this local project already has its own files). Replace `USERNAME` below with your actual GitHub username, then run in PowerShell from this folder:
+Create an empty GitHub repository named `logesh-learning-hub` in the `logeshps-labs` organization (do not add a README or license there if this local project already has its own files). If publishing under a different owner, replace `logeshps-labs` in the commands below with that GitHub username or organization slug. Run in PowerShell from this folder:
 
 ```powershell
-git remote add origin https://github.com/USERNAME/logesh-learning-hub.git
+git remote add origin https://github.com/logeshps-labs/logesh-learning-hub.git
 git branch -M main
 ```
 
 If `origin` is already configured, inspect it with `git remote -v` and update it only if needed:
 
 ```powershell
-git remote set-url origin https://github.com/USERNAME/logesh-learning-hub.git
+git remote set-url origin https://github.com/logeshps-labs/logesh-learning-hub.git
 ```
 
 ## Push the project to GitHub
 
-Replace `USERNAME` with your GitHub username if using the HTTPS URL directly. Authenticate with GitHub when prompted (or use your configured Git Credential Manager).
+Authenticate with GitHub when prompted (or use your configured Git Credential Manager). For a different account or organization, use its owner slug in the remote URL.
 
 ```powershell
 git add .
@@ -71,8 +71,8 @@ For later updates, use `git add .`, commit with a useful message, then `git push
 2. Go to **Settings → Pages**.
 3. Under **Build and deployment**, select **Deploy from a branch**.
 4. Select branch `main` and folder `/(root)`, then save.
-5. Wait for the Pages deployment to finish. The site should be available at `https://USERNAME.github.io/logesh-learning-hub/`.
-6. Replace every `USERNAME` placeholder in `sitemap.xml` and `robots.txt` with your actual GitHub username. Update the LinkedIn links in `index.html`, `about.html`, and `contact.html` to the correct profile URL.
+5. Wait for the Pages deployment to finish. The site should be available at `https://logeshps-labs.github.io/logesh-learning-hub/`.
+6. The sitemap and robots file use the current organization URL. If you publish under a different owner, update those URLs to match. Update the LinkedIn links in `index.html`, `about.html`, and `contact.html` to the correct profile URL.
 
 All site-internal links use relative paths so pages and assets work under `/logesh-learning-hub/`. If you change the repository name, review the canonical public URL in the sitemap and robots file.
 
