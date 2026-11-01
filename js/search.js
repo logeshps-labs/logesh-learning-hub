@@ -8,9 +8,9 @@
   const entries = [
     { title: "What is Artificial Intelligence?", type: "Lesson · AI Fundamentals · Beginner · 5 min", href: "lessons/what-is-ai.html", text: "AI intelligence prediction machine learning patterns" },
     { title: "What is Generative AI?", type: "Lesson · AI Fundamentals · Beginner · 6 min", href: "lessons/what-is-generative-ai.html", text: "generative models prompts content language images" },
-    { title: "What is an AI Agent?", type: "Lesson · Agentic AI · Beginner · 6 min", href: "lessons/what-is-an-ai-agent.html", text: "agents goals tools context planning" },
+    { title: "What is an AI Agent?", type: "Lesson · Agentic AI · Beginner · 7 min", href: "lessons/what-is-an-ai-agent.html", text: "agents goals tools context planning" },
     { title: "AI Agent vs. Traditional Automation", type: "Lesson · Agentic AI · Beginner · 6 min", href: "lessons/ai-agent-vs-automation.html", text: "workflow fixed flexible compare automation" },
-    { title: "What is Agentic Automation?", type: "Lesson · Agentic AI · Intermediate · 7 min", href: "lessons/what-is-agentic-automation.html", text: "orchestration hybrid people systems" },
+    { title: "What is Agentic Automation?", type: "Lesson · Agentic AI · Intermediate · 8 min", href: "lessons/what-is-agentic-automation.html", text: "orchestration hybrid people systems" },
     { title: "Human-in-the-Loop", type: "Lesson · Agentic AI · Intermediate · 6 min", href: "lessons/human-in-the-loop.html", text: "approval people review checkpoints oversight" },
     { title: "Enterprise AI Guardrails", type: "Lesson · Agentic AI · Advanced · 7 min", href: "lessons/enterprise-ai-guardrails.html", text: "governance permissions data monitoring responsible" },
     { title: "RPA vs. APIs vs. AI Agents", type: "Lesson · Automation Architecture · Intermediate · 7 min", href: "lessons/rpa-vs-api-vs-ai-agent.html", text: "integration robot API agent systems" },

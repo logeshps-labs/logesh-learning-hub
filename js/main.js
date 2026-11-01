@@ -44,7 +44,7 @@
       navigation.classList.toggle("is-open", !isOpen);
     });
     navigation.addEventListener("click", (event) => {
-      if (event.target instanceof HTMLAnchorElement && window.matchMedia("(max-width: 980px)").matches) {
+      if (event.target instanceof HTMLAnchorElement && window.matchMedia("(max-width: 1080px)").matches) {
         navigation.classList.remove("is-open");
         menuButton.setAttribute("aria-expanded", "false");
         const label = menuButton.querySelector(".sr-only");

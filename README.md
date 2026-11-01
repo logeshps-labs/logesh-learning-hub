@@ -104,7 +104,7 @@ For later updates, use `git add .`, commit with a useful message, then `git push
 3. Under **Build and deployment**, select **Deploy from a branch**.
 4. Select branch `main` and folder `/(root)`, then save.
 5. Wait for the Pages deployment to finish. The site should be available at `https://logeshps-labs.github.io/logesh-learning-hub/`.
-6. The sitemap and robots file use the current organization URL. If you publish under a different owner, update those URLs to match. Update the LinkedIn links in `index.html`, `about.html`, and `contact.html` to the correct profile URL.
+6. The sitemap and robots file use the current organization URL. If you publish under a different owner, update those URLs to match. The LinkedIn links currently open linkedin.com; when you have a profile URL, replace those `href` values in `index.html`, `about.html`, and `contact.html` and the shared footer links.
 
 All site-internal links use relative paths so pages and assets work under `/logesh-learning-hub/`. If you change the repository name, review the canonical public URL in the sitemap and robots file.
 
